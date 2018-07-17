@@ -6,5 +6,9 @@ RSpec.describe Account, type: :model do
   it { is_expected.to have_db_column(:pin)  }
   it { is_expected.to have_db_column(:account_number)  }
   it { is_expected.to have_db_column(:id)  }
-end 
+end
+
+ it "has valid factories" do
+   expect(FactoryBot.build(:account)).to be_valid
+ end
 end
