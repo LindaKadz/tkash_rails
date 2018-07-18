@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Transaction, type: :model do
   describe "db structure" do
+  it { is_expected.to have_db_column(:account_id)  }
   it { is_expected.to have_db_column(:amount)  }
   it { is_expected.to have_db_column(:transaction_code)  }
   it { is_expected.to have_db_column(:type)  }
