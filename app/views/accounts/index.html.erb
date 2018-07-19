@@ -1,3 +1,9 @@
-<p>"balance"</p>
+balance
 pin
 account number
+
+<% @account.each do |account| %>
+<%= link_to account.account_number, "/accounts/#{account.id}" %>
+<%= account.balance %>
+<%= account.pin %>
+<%end%>
