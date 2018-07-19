@@ -19,3 +19,7 @@ end
 Then("I should not see {string}") do |string|
  expect(page).not_to have_content string
 end
+
+When("I click on {string}") do |string|
+ click_link string
+end

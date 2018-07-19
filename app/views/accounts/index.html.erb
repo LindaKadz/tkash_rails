@@ -3,7 +3,7 @@ pin
 account number
 
 <% @account.each do |account| %>
-<%= account.account_number %>
+<%= link_to account.account_number, accounts_path(account) %>
 <%= account.balance %>
 <%= account.pin %>
 <%end%>
