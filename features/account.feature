@@ -39,4 +39,4 @@ Scenario: Access account details from index
   Given I am on the accounts page
   When I click on "254714344428"
   Then I should see "254714344428"
-  And I should not see "any other number"
+  And I should not see "254712345678"

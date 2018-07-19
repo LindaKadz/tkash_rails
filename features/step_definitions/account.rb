@@ -13,7 +13,7 @@ end
 
 When("I go to the {string} details") do |string|
   account = Account.find_by_account_number string
-  visit "/account/#{account.id}"
+  visit "/accounts/#{account.id}"
 end
 
 Then("I should not see {string}") do |string|
