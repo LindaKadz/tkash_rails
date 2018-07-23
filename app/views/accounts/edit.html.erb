@@ -1,0 +1,19 @@
+<%= form_for @account, :url => {:action => 'update', :id => @account.id} do |f| %>
+<% if @account.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+         Pin cannot be blank
+      </h2>
+      <ul>
+        <% @account.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  Account Number <%= f.text_field :account_number %>
+  Balance <%= f.text_field :balance %>
+  Pin <%= f.text_field :pin %>
+  <%= f.submit %>
+<% end %>
