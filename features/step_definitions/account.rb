@@ -70,3 +70,19 @@ end
 Then("pin of {string} should remain {string}") do |string, string2|
 
 end
+
+Then("I should see {string} link") do |string|
+  expect(page).to have_content string
+end
+
+When("I click on create account link") do
+  visit "/accounts/new"
+end
+
+Given("I am on the create account page") do
+ visit "/accounts/new"
+end
+
+When("I put {string} as {string}") do |field, value|
+  fill_in field, with:value
+end

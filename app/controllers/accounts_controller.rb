@@ -1,18 +1,22 @@
 class AccountsController < ApplicationController
 
-def index
+  def new
+   @account = Account.new
+  end
+
+  def index
   @account = Account.all
-end
+ end
 
-def show
+ def show
   @account = Account.find(params[:id])
-end
+ end
 
-def edit
+ def edit
   @account = Account.find(params[:id])
-end
+ end
 
-def update
+ def update
   @account = Account.find(params[:id])
 
   if @account.update_attributes(account_params)
@@ -20,7 +24,7 @@ def update
       else
       render 'edit'
   end
-end
+ end
 
 private
   def account_params
