@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   get '/accounts', to: 'accounts#index'
   get 'accounts/new', to: 'accounts#new'
   get '/accounts/:id', to: 'accounts#show'
